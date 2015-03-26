@@ -9,6 +9,10 @@ int main()
 
     while (x <= 5){
         cin >> number; // ask the user for a number and store it in the number variable
+        if (!cin.good()) {
+            break;     // Don't touch number unless cin is 'good'.
+        }
+        
         total = total + number; // add the number to the total. HINT - the shorthand version is: total += number;
         x++; // is the same as: x = x + 1;
     }
