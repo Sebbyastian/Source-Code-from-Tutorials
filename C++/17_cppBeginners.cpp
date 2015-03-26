@@ -3,7 +3,7 @@ using namespace std;
 
 int main()
 {
-    int age = 178;
+    unsigned int age = 178;
 
     if(age>60){
         cout << "wow you are old" << endl; // runs when the if statement is true
