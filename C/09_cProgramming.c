@@ -9,7 +9,7 @@ int main()
   name[2] = "z";
   printf("My name is %s \n", name);
   
-  char food[] = "tuna";
+  char food[sizeof "bacon"] = "tuna";
   printf("The best food is %s \n", food);
   
   strcpy(food, "bacon");
