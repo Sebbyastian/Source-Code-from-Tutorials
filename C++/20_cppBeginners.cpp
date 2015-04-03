@@ -8,14 +8,17 @@ int main()
     int numberOfPeopleEntered = 0;
 
     cout << "Enter first persons age or -1 to quit" << endl;
-    cin >> age;
 
     while(age != -1){
+        cin >> age;
+        if (!cin.good()) {
+            break;
+        }
+        
         ageTotal = ageTotal + age; // or shorthand: ageTotal += age;
         numberOfPeopleEntered++;
 
         cout << "Enter next persons age or -1 to quit" << endl;
-        cin >> age;
     }
 
     cout << "Number of peoople eneted: " << numberOfPeopleEntered << endl;
