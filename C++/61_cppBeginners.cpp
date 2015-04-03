@@ -19,7 +19,7 @@ class Spunky<char>{
 };
 int main()
 {
-	Spunky<int> obj1(7; 
+	Spunky<int> obj1(7); 
 	Spunky<double> obj2(3.154);
 	Spunky<char> obj3('q');
 	
