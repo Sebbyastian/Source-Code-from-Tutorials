@@ -28,6 +28,9 @@ int getWhatTheyWant(){
 	 cout << "4 - quit program" <<endl;
 	 
 	 cin >> choice;
+	 if (!cin.good()) {
+	 	return 4;
+	 }
 	 return choice;
 	 
 }
