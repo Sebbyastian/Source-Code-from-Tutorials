@@ -9,7 +9,7 @@ int main()
 		
 		if(sonsAge > momsAge)
 		{
-		throw 99;
+		    throw std::overflow_error("For some reason, a mother can't adopt an older son...");
 		}
 	}catch(int x);
 		cout << "son can not be older than mom ERROR NUMBER :" << x << endl;
