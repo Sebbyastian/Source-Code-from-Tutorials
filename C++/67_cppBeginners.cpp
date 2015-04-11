@@ -10,7 +10,7 @@ int main()
 	 string name;
 	 double money;
 	 
-	 while(theFile >> idNumber >> name >> money)
+	 while(theFile >> idNumber >> name >> money && theFile.good())
 	 {
 		cout <<idNumber << "," << name << "," << money << endl;
 	 

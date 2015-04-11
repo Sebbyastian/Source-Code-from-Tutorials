@@ -13,7 +13,7 @@ int main()
 	 string name;
 	 double money;
 	 
-	 while(cin >> idNumber >> name >> money)
+	 while(cin >> idNumber >> name >> money && cin.good())
 	 {
 	 theFile <<idNumber << ' ' << name << ' ' << money << endl;
 	 

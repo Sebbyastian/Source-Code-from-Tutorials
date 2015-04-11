@@ -39,6 +39,9 @@ int getWhatTheyWant(){
 	 cout << "4 - quit program" <<endl;
 	 
 	 cin >> choice;
+	 if (!cin.good()) {
+	 	return 4;
+	 }
 	 return choice;
 	 
 }
@@ -51,14 +54,14 @@ void displayItems(int x){
 	double power;
 	
 	if(x==1){
-		while(objectFile >> name >> power){
+		while(objectFile >> name >> power && objectFile.good()){
 			if(power==0){
 				cout << name << ' ' << power << endl;
 		}
 	}
 }
 	if(x==2){
-		while(objectFile >> name >> power){
+		while(objectFile >> name >> power && objectFile.good()){
 			if(power>0){
 				cout << name << ' ' << power << endl;
 		}
@@ -66,7 +69,7 @@ void displayItems(int x){
 }	
 
 	if(x==3){
-		while(objectFile >> name >> power){
+		while(objectFile >> name >> power && objectFile.good()){
 			if(power<0){
 				cout << name << ' ' << power << endl;
 			}
